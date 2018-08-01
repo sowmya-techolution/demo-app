@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-vaclosepay-channel_mux" realm="biller-vaclosepay-channel_mux">
+    <out>biller-vaclosepay-channel-in</out>
+    <in>biller-vaclosepay-channel-out</in>
+    <ready>biller-vaclosepay-channel.ready</ready>
+    <unhandled>biller-vaclosepay-channel-unhandled</unhandled>
+</mux>

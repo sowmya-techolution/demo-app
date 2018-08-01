@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<txnmgr class="org.jpos.transaction.TransactionManager" logger="Q2" name="billerdkilink-trxmgnr" realm="billerdkilink-trxmgnr-realm">
+    <property name="space"      value="tspace:defaultbiller"/>
+    <property name="queue"      value="mytxnqueuebiller"/>
+    <property name="debug"      value="true"/>
+    <property name="profiler"   value="true"/>
+
+    <participant class="co.id.bankdki.billerdkilinkrouter.iso.Selector" logger="Q2">
+
+
+        <property name="0800001"            value="Isolog LogOn Isolog"/>
+        <property name="0800301"            value="Isolog EchoTest Isolog"/>
+
+        <property name="0200381000100001"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100001"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100001"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100002"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100002"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100002"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100003"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100003"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100003"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100004"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100004"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100004"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100005"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100005"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100005"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100006"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100006"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100006"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100007"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100007"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100007"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100008"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100008"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100008"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100009"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100009"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100009"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100010"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100010"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100010"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100011"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100011"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100011"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100012"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100012"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100012"   value="Isolog FinnetReversal Isolog"/>
+        <!--Finnet Jastel digunakan untuk Telkom & Speedy -->
+
+        <property name="0200381000100013"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100013"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100013"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100014"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100014"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100014"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100015"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100015"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100015"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100055"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100055"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100055"   value="Isolog FinnetReversal Isolog"/>
+        <!--Transvision -->
+
+        <property name="0200381000100056"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100056"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100056"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100034"   value="Isolog FinnetInquiry Isolog"/>
+        <property name="0200501000100034"   value="Isolog FinnetPayment Isolog"/>
+        <property name="0400501000100034"   value="Isolog FinnetReversal Isolog"/>
+
+        <property name="0200381000100035"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100035"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100035"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100059"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100059"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100059"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100060"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100060"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100060"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100061"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100061"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100061"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100062"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100062"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100062"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100063"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100063"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100063"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100064"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100064"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100064"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100065"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100065"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100065"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100059"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100059"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100059"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100067"   value="Isolog ArtajasaInquiry Isolog"/>
+        <property name="0200501000100067"   value="Isolog ArtajasaPayment Isolog"/>
+        <property name="0400501000100067"   value="Isolog ArtajasaReversal Isolog"/>
+
+        <property name="0200381000200003"   value="Isolog InquiryBillingGenerator Isolog"/>
+        <property name="0200501000200003"   value="Isolog PaymentBillingGenerator Isolog"/>
+        <property name="0400501000200003"   value="Isolog ReversalBillingGenerator Isolog"/>
+        <!--Billing Generator-->
+
+        <property name="0200381000100054"   value="Isolog VaclosepayInquiry Isolog"/>
+        <property name="0200501000100054"   value="Isolog VaclosepayPayment Isolog"/>
+        <property name="0400501000100054"   value="Isolog VaclosepayReversal Isolog"/>
+
+        <property name="0200381000100058"   value="Isolog VaopenpayInquiry Isolog"/>
+        <property name="0200501000100058"   value="Isolog VaopenpayPayment Isolog"/>
+        <property name="0400501000100058"   value="Isolog VaopenpayReversal Isolog"/>
+
+
+        <property name="isorequest" value="REQUESTBILLER"/>
+        <property name="isosource"  value="ISOBILLER"/>
+        <property name="logger"         value="Q2"/>
+    </participant>
+
+    <group name="Isolog">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.Isolog" logger="Q2">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+        </participant>
+    </group>
+
+
+    <group name="LogOn">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.Route" logger="Q2">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+        </participant>
+    </group>
+
+    <group name="EchoTest">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.Route" logger="Q2">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+        </participant>
+    </group>
+
+    <group name="FinnetInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.finnet.Inquiry" logger="finnet">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="finnet"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-finnet-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="FinnetPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.finnet.Payment" logger="finnet">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="finnet"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-finnet-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="FinnetReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.finnet.Reversal" logger="finnet">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="finnet"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-finnet-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="RintisInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.rintis.Inquiry" logger="rintis">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="rintis"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-rintis-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="RintisPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.rintis.Payment" logger="rintis">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="rintis"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-rintis-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="RintisReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.rintis.Reversal" logger="rintis">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="rintis"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-rintis-channel_mux"/>
+        </participant>
+    </group>
+
+
+
+    <group name="ArtajasaInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.artajasa.Inquiry" logger="artajasa">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="artajasa"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-artajasa-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ArtajasaPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.artajasa.Payment" logger="artajasa">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="artajasa"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-artajasa-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ArtajasaReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.artajasa.Reversal" logger="artajasa">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="artajasa"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-artajasa-channel_mux"/>
+        </participant>
+    </group>
+
+
+    <group name="InquiryBillingGenerator">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.billinggenerator.Inquiry" logger="billinggenerator">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="billinggenerator"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="billinggenerator-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentBillingGenerator">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.billinggenerator.Payment" logger="billinggenerator">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="billinggenerator"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="billinggenerator-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalBillingGenerator">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.billinggenerator.Reversal" logger="billinggenerator">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="billinggenerator"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="billinggenerator-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaclosepayInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaclosepay.Inquiry" logger="vaclosepay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaclosepay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaclosepay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaclosepayPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaclosepay.Payment" logger="vaclosepay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaclosepay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaclosepay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaclosepayReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaclosepay.Reversal" logger="vaclosepay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaclosepay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaclosepay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaopenpayInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaopenpay.Inquiry" logger="vaopenpay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaopenpayPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaopenpay.Payment" logger="vaopenpay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaopenpayReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaopenpay.Reversal" logger="vaopenpay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+</txnmgr>

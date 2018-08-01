@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-finnet-channel_mux" realm="biller-finnet-channel_mux">
+    <out>biller-finnet-channel-in</out>
+    <in>biller-finnet-channel-out</in>
+    <ready>biller-finnet-channel.ready</ready>
+    <unhandled>biller-finnet-channel-unhandled</unhandled>
+</mux>

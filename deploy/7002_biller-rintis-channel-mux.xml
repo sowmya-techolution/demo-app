@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-rintis-channel_mux" realm="biller-rintis-channel_mux">
+    <out>biller-rintis-channel-in</out>
+    <in>biller-rintis-channel-out</in>
+    <ready>biller-rintis-channel.ready</ready>
+    <unhandled>biller-rintis-channel-unhandled</unhandled>
+</mux>

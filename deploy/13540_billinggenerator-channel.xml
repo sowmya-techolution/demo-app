@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="billinggenerator-channel" realm="billinggenerator-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.152"/>
+    <property name="port" value="13540"/>
+
+    <!--<property name="host" value="10.4.128.5"/>-->
+    <!--<property name="port" value="1101"/>-->
+
+    </channel>
+    <in>billinggenerator-channel-in</in>
+    <out>billinggenerator-channel-out</out>
+    <ready>billinggenerator-channel.ready</ready>
+    <unhandled>billinggenerator-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

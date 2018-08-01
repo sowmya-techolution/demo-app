@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-vaopenpay-channel" realm="biller-vaopenpay-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.152"/>
+    <property name="port" value="7006"/>
+
+
+    </channel>
+    <in>biller-vaopenpay-channel-in</in>
+    <out>biller-vaopenpay-channel-out</out>
+    <ready>biller-vaopenpay-channel.ready</ready>
+    <unhandled>biller-vaopenpay-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

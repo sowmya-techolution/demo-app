@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-vaclosepay-channel" realm="biller-vaclosepay-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.152"/>
+    <property name="port" value="7005"/>
+
+
+    </channel>
+    <in>biller-vaclosepay-channel-in</in>
+    <out>biller-vaclosepay-channel-out</out>
+    <ready>biller-vaclosepay-channel.ready</ready>
+    <unhandled>biller-vaclosepay-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
