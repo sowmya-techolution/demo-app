@@ -138,6 +138,9 @@
         <property name="0200501000100058"   value="Isolog VaopenpayPayment Isolog"/>
         <property name="0400501000100058"   value="Isolog VaopenpayReversal Isolog"/>
 
+        <property name="0200381000100084"   value="Isolog EsamsatInquiry Isolog"/>
+        <property name="0200501000100084"   value="Isolog EsamsatPayment Isolog"/>
+        <property name="0400501000100084"   value="Isolog EsamsatReversal Isolog"/>
 
         <property name="isorequest" value="REQUESTBILLER"/>
         <property name="isosource"  value="ISOBILLER"/>
@@ -347,6 +350,36 @@
 
     <group name="VaopenpayReversal">
         <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaopenpay.Reversal" logger="vaopenpay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="EsamsatInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.pbb.Inquiry" logger="vaopenpay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="EsamsatPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.pbb.Payment" logger="vaopenpay">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="EsamsatReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.pbb.Reversal" logger="vaopenpay">
             <property name="isorequest"     value="REQUESTBILLER"/>
             <property name="isosource"      value="ISOBILLER"/>
             <property name="logger"         value="vaopenpay"/>

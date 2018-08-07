@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-esamsat-channel" realm="biller-esamsat-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.152"/>
+    <property name="port" value="7007"/>
+
+
+    </channel>
+    <in>biller-esamsat-channel-in</in>
+    <out>biller-esamsat-channel-out</out>
+    <ready>biller-esamsat-channel.ready</ready>
+    <unhandled>biller-esamsat-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
