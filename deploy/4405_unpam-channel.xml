@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="unpam-channel" realm="unpam-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+
+    <!--<channel class="co.id.bankdki.billerdkilink.channel.bni.BniChannel" logger="Q2" packager="org.jpos.iso.packager.ISO87APackager">-->
+
+    <!--Production-->
+    <property name="host" value="10.100.111.153"/>
+    <property name="port" value="8205"/>
+
+    <!--Development-->
+    <!--<property name="host" value="10.100.111.152"/>-->
+    <!--<property name="port" value="8205"/>-->
+
+    </channel>
+    <in>unpam-channel-in</in>
+    <out>unpam-channel-out</out>
+    <ready>unpam-channel.ready</ready>
+    <unhandled>unpam-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

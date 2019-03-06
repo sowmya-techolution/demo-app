@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-oldjakcard-channel_mux" realm="biller-oldjakcard-channel_mux">
+    <out>biller-oldjakcard-channel-in</out>
+    <in>biller-oldjakcard-channel-out</in>
+    <ready>biller-oldjakcard-channel.ready</ready>
+    <unhandled>biller-oldjakcard-channel-unhandled</unhandled>
+</mux>

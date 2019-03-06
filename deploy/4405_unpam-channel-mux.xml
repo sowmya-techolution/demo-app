@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="unpam-channel_mux" realm="unpam-channel_mux">
+    <out>unpam-channel-in</out>
+    <in>unpam-channel-out</in>
+    <ready>unpam-channel.ready unpam-channel-1.ready</ready>
+    <unhandled>unpam-channel-unhandled</unhandled>
+</mux>

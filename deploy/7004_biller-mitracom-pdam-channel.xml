@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="mitracom" name="biller-mitracom-pdam-channel" realm="biller-mitracom-pdam-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="mitracom" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.153"/>
+    <property name="port" value="7004"/>
+
+
+    </channel>
+    <in>biller-mitracom-pdam-channel-in</in>
+    <out>biller-mitracom-pdam-channel-out</out>
+    <ready>biller-mitracom-pdam-channel.ready</ready>
+    <unhandled>biller-mitracom-pdam-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

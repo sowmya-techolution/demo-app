@@ -6,7 +6,6 @@ import org.jpos.core.Configuration;
 import org.jpos.core.ConfigurationException;
 import org.jpos.iso.ISOMsg;
 import org.jpos.iso.ISOSource;
-import org.jpos.iso.ISOUtil;
 import org.jpos.q2.iso.QMUX;
 import org.jpos.space.Space;
 import org.jpos.space.SpaceFactory;
@@ -111,8 +110,9 @@ import java.text.DecimalFormatSymbols;
                     m.set(48, resp.getString(48));
                     m.set(59,resp.getString(59));
                     m.set(61,resp.getString(61));
+                    m.set(60,resp.getString(60));
 
-                break;
+                        break;
 
             }
                   m.set(39,resp.getString(39));

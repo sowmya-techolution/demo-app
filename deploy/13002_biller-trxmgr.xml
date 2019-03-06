@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<txnmgr class="org.jpos.transaction.TransactionManager" logger="Q2" name="billerdkilink-trxmgnr-stress_test" realm="billerdkilink-trxmgnr-realm-stress_test">
+    <property name="space"      value="tspace:defaultbiller-stress_test"/>
+    <property name="queue"      value="mytxnqueuebiller-stress_test"/>
+    <property name="debug"      value="true"/>
+    <property name="profiler"   value="true"/>
+
+    <participant class="co.id.bankdki.billerdkilinkrouter.iso.Selector" logger="Q2">
+
+        <property name="0800001"            value="Isolog LogOn Isolog"/>
+        <property name="0800301"            value="Isolog EchoTest Isolog"/>
+
+        <property name="0200381000100001"   value="FinnetInquiry"/>
+        <property name="0200501000100001"   value="FinnetPayment"/>
+        <property name="0400501000100001"   value="FinnetReversal"/>
+
+        <property name="0200381000100002"   value="FinnetInquiry"/>
+        <property name="0200501000100002"   value="FinnetPayment"/>
+        <property name="0400501000100002"   value="FinnetReversal"/>
+
+        <property name="0200381000100003"   value="FinnetInquiry"/>
+        <property name="0200501000100003"   value="FinnetPayment"/>
+        <property name="0400501000100003"   value="FinnetReversal"/>
+
+        <property name="0200381000100004"   value="FinnetInquiry"/>
+        <property name="0200501000100004"   value="FinnetPayment"/>
+        <property name="0400501000100004"   value="FinnetReversal"/>
+
+        <property name="0200381000100005"   value="FinnetInquiry"/>
+        <property name="0200501000100005"   value="FinnetPayment"/>
+        <property name="0400501000100005"   value="FinnetReversal"/>
+
+        <property name="0200381000100006"   value="FinnetInquiry"/>
+        <property name="0200501000100006"   value="FinnetPayment"/>
+        <property name="0400501000100006"   value="FinnetReversal"/>
+
+        <property name="0200381000100007"   value="FinnetInquiry"/>
+        <property name="0200501000100007"   value="FinnetPayment"/>
+        <property name="0400501000100007"   value="FinnetReversal"/>
+
+        <property name="0200381000100008"   value="FinnetInquiry"/>
+        <property name="0200501000100008"   value="FinnetPayment"/>
+        <property name="0400501000100008"   value="FinnetReversal"/>
+
+        <property name="0200381000100009"   value="FinnetInquiry"/>
+        <property name="0200501000100009"   value="FinnetPayment"/>
+        <property name="0400501000100009"   value="FinnetReversal"/>
+
+        <property name="0200381000100010"   value="FinnetInquiry"/>
+        <property name="0200501000100010"   value="FinnetPayment"/>
+        <property name="0400501000100010"   value="FinnetReversal"/>
+
+        <property name="0200381000100011"   value="FinnetInquiry"/>
+        <property name="0200501000100011"   value="FinnetPayment"/>
+        <property name="0400501000100011"   value="FinnetReversal"/>
+
+        <property name="0200381000100012"   value="FinnetInquiry"/>
+        <property name="0200501000100012"   value="FinnetPayment"/>
+        <property name="0400501000100012"   value="FinnetReversal"/>
+        <!--Finnet Jastel digunakan untuk Telkom & Speedy -->
+
+        <property name="0200381000100013"   value="FinnetInquiry"/>
+        <property name="0200501000100013"   value="FinnetPayment"/>
+        <property name="0400501000100013"   value="FinnetReversal"/>
+
+        <property name="0200381000100014"   value="FinnetInquiry"/>
+        <property name="0200501000100014"   value="FinnetPayment"/>
+        <property name="0400501000100014"   value="FinnetReversal"/>
+
+        <property name="0200381000100015"   value="FinnetInquiry"/>
+        <property name="0200501000100015"   value="FinnetPayment"/>
+        <property name="0400501000100015"   value="FinnetReversal"/>
+
+        <property name="0200381000100055"   value="FinnetInquiry"/>
+        <property name="0200501000100055"   value="FinnetPayment"/>
+        <property name="0400501000100055"   value="FinnetReversal"/>
+        <!--Transvision -->
+
+        <property name="0200381000100056"   value="FinnetInquiry"/>
+        <property name="0200501000100056"   value="FinnetPayment"/>
+        <property name="0400501000100056"   value="FinnetReversal"/>
+
+        <property name="0200381000100034"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100034"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100034"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100035"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100035"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100035"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100059"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100059"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100059"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100060"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100060"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100060"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100061"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100061"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100061"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100062"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100062"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100062"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100063"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100063"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100063"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100064"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100064"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100064"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100065"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100065"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100065"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100059"   value="Isolog RintisInquiry Isolog"/>
+        <property name="0200501000100059"   value="Isolog RintisPayment Isolog"/>
+        <property name="0400501000100059"   value="Isolog RintisReversal Isolog"/>
+
+        <property name="0200381000100067"   value="Isolog ArtajasaInquiry Isolog"/>
+        <property name="0200501000100067"   value="Isolog ArtajasaPayment Isolog"/>
+        <property name="0400501000100067"   value="Isolog ArtajasaReversal Isolog"/>
+
+        <property name="0200381000100088"   value="Isolog ArtajasaInquiry Isolog"/>
+        <property name="0200501000100088"   value="Isolog ArtajasaPayment Isolog"/>
+        <property name="0400501000100088"   value="Isolog ArtajasaReversal Isolog"/>
+
+        <property name="0200381000100089"   value="Isolog ArtajasaInquiry Isolog"/>
+        <property name="0200501000100089"   value="Isolog ArtajasaPayment Isolog"/>
+        <property name="0400501000100089"   value="Isolog ArtajasaReversal Isolog"/>
+
+        <property name="0200381000100090"   value="Isolog ArtajasaInquiry Isolog"/>
+        <property name="0200501000100090"   value="Isolog ArtajasaPayment Isolog"/>
+        <property name="0400501000100090"   value="Isolog ArtajasaReversal Isolog"/>
+
+        <property name="0200381000200003"   value="Isolog InquiryBillingGenerator Isolog"/>
+        <property name="0200501000200003"   value="Isolog PaymentBillingGenerator Isolog"/>
+        <property name="0400501000200003"   value="Isolog ReversalBillingGenerator Isolog"/>
+        <!--Billing Generator-->
+
+        <property name="0200381000100054"   value="Isolog VaclosepayInquiry Isolog"/>
+        <property name="0200501000100054"   value="Isolog VaclosepayPayment Isolog"/>
+        <property name="0400501000100054"   value="Isolog VaclosepayReversal Isolog"/>
+
+        <property name="0200381000100058"   value="Isolog VaopenpayInquiry Isolog"/>
+        <property name="0200501000100058"   value="Isolog VaopenpayPayment Isolog"/>
+        <property name="0400501000100058"   value="Isolog VaopenpayReversal Isolog"/>
+
+        <property name="0200381000100050"   value="Isolog InquiryMitracommAetra Isolog"/>
+        <property name="0200501000100050"   value="Isolog PaymentMitracommAetra Isolog"/>
+        <property name="0400501000100050"   value="Isolog ReversalMitracommAetra Isolog"/>
+
+        <property name="0200381000100051"   value="Isolog InquiryMitracommPalyja Isolog"/>
+        <property name="0200501000100051"   value="Isolog PaymentMitracommPalyja Isolog"/>
+        <property name="0400501000100051"   value="Isolog ReversalMitracommPalyja Isolog"/>
+
+        <property name="0200381000100068"   value="Isolog InquiryMitracommDepok Isolog"/>
+        <property name="0200501000100068"   value="Isolog PaymentMitracommDepok Isolog"/>
+        <property name="0400501000100068"   value="Isolog ReversalMitracommDepok Isolog"/>
+
+        <property name="0200381000100069"   value="Isolog InquiryMitracommBsd Isolog"/>
+        <property name="0200501000100069"   value="Isolog PaymentMitracommBsd Isolog"/>
+        <property name="0400501000100069"   value="Isolog ReversalMitracommBsd Isolog"/>
+
+        <property name="0200381000100070"   value="Isolog InquiryMitracommKotaBandung Isolog"/>
+        <property name="0200501000100070"   value="Isolog PaymentMitracommKotaBandung Isolog"/>
+        <property name="0400501000100070"   value="Isolog ReversalMitracommKotaBandung Isolog"/>
+
+        <property name="0200381000100071"   value="Isolog InquiryMitracommKabBandung Isolog"/>
+        <property name="0200501000100071"   value="Isolog PaymentMitracommKabBandung Isolog"/>
+        <property name="0400501000100071"   value="Isolog ReversalMitracommKabBandung Isolog"/>
+
+        <property name="0200381000100080"   value="Isolog PostpaidPlnInquiry Isolog"/>
+        <property name="0200501000100080"   value="Isolog PostpaidPlnPayment Isolog"/>
+        <property name="0400501000100080"   value="Isolog PostpaidPlnReversal Isolog"/>
+
+        <property name="0200381000100081"   value="Isolog PrepaidPlnInquiry Isolog"/>
+        <property name="0200501000100081"   value="Isolog PrepaidPlnPayment Isolog"/>
+        <property name="0400501000100081"   value="Isolog PrepaidPlnReversal Isolog"/>
+
+        <property name="0200381000100082"   value="Isolog NontaglisPlnInquiry Isolog"/>
+        <property name="0200501000100082"   value="Isolog NontaglisPlnPayment Isolog"/>
+        <property name="0400501000100082"   value="Isolog NontaglisPlnReversal Isolog"/>
+
+        <!--        <property name="0200381000100057"   value="Isolog InquiryUnpam Isolog"/>-->
+        <!--        <property name="0200501000100057"   value="Isolog PaymentUnpam Isolog"/>-->
+
+        <property name="0200381000100053"   value="Isolog BpjsInquiry Isolog"/>
+        <property name="0200501000100053"   value="Isolog BpjsPayment Isolog"/>
+        <property name="0400501000100053"   value="Isolog BpjsReversal Isolog"/>
+
+        <!--        <property name="0200381000100084"   value="Isolog EsamsatInquiry Isolog"/>-->
+        <!--        <property name="0200501000100084"   value="Isolog EsamsatPayment Isolog"/>-->
+        <!--        <property name="0400501000100084"   value="Isolog EsamsatReversal Isolog"/>-->
+
+        <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+        <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+        <property name="logger"         value="Q2"/>
+    </participant>
+
+    <group name="Isolog">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.Isolog" logger="Q2">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+        </participant>
+    </group>
+
+
+    <group name="LogOn">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.Route" logger="Q2">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+        </participant>
+    </group>
+
+    <group name="EchoTest">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.Route" logger="Q2">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+        </participant>
+    </group>
+
+    <group name="FinnetInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.finnet.Inquiry" logger="finnet">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="finnet"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-finnet-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="FinnetPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.finnet.Payment" logger="finnet">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="finnet"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-finnet-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="FinnetReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.finnet.Reversal" logger="finnet">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="finnet"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-finnet-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="RintisInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.rintis.Inquiry" logger="Q2">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-rintis-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="RintisPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.rintis.Payment" logger="Q2">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-rintis-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="RintisReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.rintis.Reversal" logger="Q2">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-rintis-channel_mux"/>
+        </participant>
+    </group>
+
+
+
+    <group name="ArtajasaInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.artajasa.Inquiry" logger="artajasa">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="artajasa"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-artajasa-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ArtajasaPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.artajasa.Payment" logger="artajasa">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="artajasa"/>
+            <property name="timeout"        value="90000" />
+            <property name="mux"            value="biller-artajasa-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ArtajasaReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.artajasa.Reversal" logger="artajasa">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="artajasa"/>
+            <property name="timeout"        value="90000" />
+            <property name="mux"            value="biller-artajasa-channel_mux"/>
+        </participant>
+    </group>
+
+
+    <group name="InquiryBillingGenerator">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.billinggenerator.Inquiry" logger="billinggenerator">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="billinggenerator"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="billinggenerator-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentBillingGenerator">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.billinggenerator.Payment" logger="billinggenerator">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="billinggenerator"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="billinggenerator-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalBillingGenerator">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.billinggenerator.Reversal" logger="billinggenerator">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="billinggenerator"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="billinggenerator-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaclosepayInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaclosepay.Inquiry" logger="vaclosepay">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="vaclosepay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaclosepay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaclosepayPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaclosepay.Payment" logger="vaclosepay">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="vaclosepay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaclosepay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaclosepayReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaclosepay.Reversal" logger="vaclosepay">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="vaclosepay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaclosepay-channel_mux"/>
+        </participant>
+    </group>
+
+
+    <group name="VaopenpayInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaopenpay.Inquiry" logger="vaopenpay">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="VaopenpayPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.vaopenpay.Payment" logger="vaopenpay">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="vaopenpay"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-vaopenpay-channel_mux"/>
+        </participant>
+    </group>
+
+
+    <group name="InquiryMitracommAetra">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Inquiry" logger="aetra">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="aetra"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentMitracommAetra">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Payment" logger="aetra">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="aetra"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalMitracommAetra">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Reversal" logger="aetra">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="aetra"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="InquiryMitracommPalyja">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Inquiry" logger="palyja">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="palyja"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentMitracommPalyja">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Payment" logger="palyja">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="palyja"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalMitracommPalyja">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Reversal" logger="palyja">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="Q2"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="InquiryMitracommDepok">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Inquiry" logger="depok">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="depok"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentMitracommDepok">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Payment" logger="depok">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="depok"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalMitracommDepok">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Reversal" logger="depok">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="depok"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="InquiryMitracommBsd">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Inquiry" logger="bsd">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="bsd"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentMitracommBsd">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Payment" logger="bsd">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="bsd"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalMitracommBsd">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Reversal" logger="bsd">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="bsd"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="InquiryMitracommKotaBandung">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Inquiry" logger="kotabandung">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="kotabandung"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentMitracommKotaBandung">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Payment" logger="kotabandung">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="kotabandung"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalMitracommKotaBandung">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Reversal" logger="kotabandung">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="kotabandung"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="InquiryMitracommKabBandung">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Inquiry" logger="kabbandung">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="kabbandung"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PaymentMitracommKabBandung">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Payment" logger="kabbandung">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="kabbandung"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="ReversalMitracommKabBandung">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.mitracom.Reversal" logger="kabbandung">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="kabbandung"/>
+            <property name="timeout"        value="10000" />
+            <property name="mux"            value="biller-mitracom-pdam-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PostpaidPlnInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Inquiry" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+    <group name="PostpaidPlnPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Payment" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+    <group name="PostpaidPlnReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Reversal" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="PrepaidPlnInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Inquiry" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+    <group name="PrepaidPlnPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Payment" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+    <group name="PrepaidPlnReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Reversal" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="NontaglisPlnInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Inquiry" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+    <group name="NontaglisPlnPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Payment" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+    <group name="NontaglisPlnReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.gsp.Reversal" logger="gsp">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="gsp"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-gsp-channel_mux"/>
+        </participant>
+    </group>
+
+    <!--    <group name="InquiryUnpam">-->
+    <!--        <participant class="co.id.bankdki.billerdkilinkrouter.iso.unpam.Inquiry" logger="unpam">-->
+    <!--            <property name="isorequest"     value="REQUESTBILLER"/>-->
+    <!--            <property name="isosource"      value="ISOBILLER"/>-->
+    <!--            <property name="logger"         value="unpam"/>-->
+    <!--            <property name="timeout"        value="30000" />-->
+    <!--            <property name="mux"            value="unpam-channel_mux"/>-->
+    <!--        </participant>-->
+    <!--    </group>-->
+    <!--    -->
+    <!--    <group name="PaymentUnpam">-->
+    <!--        <participant class="co.id.bankdki.billerdkilinkrouter.iso.unpam.Payment" logger="unpam">-->
+    <!--            <property name="isorequest"     value="REQUESTBILLER"/>-->
+    <!--            <property name="isosource"      value="ISOBILLER"/>-->
+    <!--            <property name="logger"         value="unpam"/>-->
+    <!--            <property name="timeout"        value="30000" />-->
+    <!--            <property name="mux"            value="unpam-channel_mux"/>-->
+    <!--        </participant>-->
+    <!--    </group>-->
+
+    <group name="BpjsInquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.bpjs.Inquiry" logger="bpjs">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="bpjs"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-bpjs-channel_mux"/>
+        </participant>
+    </group>
+    <group name="BpjsPayment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.bpjs.Payment" logger="bpjs">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="bpjs"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-bpjs-channel_mux"/>
+        </participant>
+    </group>
+    <group name="BpjsReversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.bpjs.Reversal" logger="bpjs">
+            <property name="isorequest" value="REQUESTBILLER-STRESS_TEST"/>
+            <property name="isosource"  value="ISOBILLER-STRESS_TEST"/>
+            <property name="logger"         value="bpjs"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-bpjs-channel_mux"/>
+        </participant>
+    </group>
+
+    <!--    <group name="EsamsatInquiry">-->
+    <!--        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.Inquiry" logger="vaopenpay">-->
+    <!--            <property name="isorequest"     value="REQUESTBILLER"/>-->
+    <!--            <property name="isosource"      value="ISOBILLER"/>-->
+    <!--            <property name="logger"         value="vaopenpay"/>-->
+    <!--            <property name="timeout"        value="30000" />-->
+    <!--            <property name="mux"            value="biller-vaopenpay-channel_mux"/>-->
+    <!--        </participant>-->
+    <!--    </group>-->
+    <!--    -->
+    <!--    <group name="EsamsatPayment">-->
+    <!--        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.Payment" logger="vaopenpay">-->
+    <!--            <property name="isorequest"     value="REQUESTBILLER"/>-->
+    <!--            <property name="isosource"      value="ISOBILLER"/>-->
+    <!--            <property name="logger"         value="vaopenpay"/>-->
+    <!--            <property name="timeout"        value="30000" />-->
+    <!--            <property name="mux"            value="biller-vaopenpay-channel_mux"/>-->
+    <!--        </participant>-->
+    <!--    </group>-->
+    <!--    -->
+    <!--    <group name="EsamsatReversal">-->
+    <!--        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.Reversal" logger="vaopenpay">-->
+    <!--            <property name="isorequest"     value="REQUESTBILLER"/>-->
+    <!--            <property name="isosource"      value="ISOBILLER"/>-->
+    <!--            <property name="logger"         value="vaopenpay"/>-->
+    <!--            <property name="timeout"        value="30000" />-->
+    <!--            <property name="mux"            value="biller-vaopenpay-channel_mux"/>-->
+    <!--        </participant>-->
+    <!--    </group>-->
+</txnmgr>
+

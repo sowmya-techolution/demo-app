@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server class="org.jpos.q2.iso.QServer" logger="Q2" name="billerdkilinkrouter-server-api-management" realm="billerdkilinkrouter-server-realm-api-management">
+    <channel class="org.jpos.iso.channel.NACChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87BPackager"/>
+    <attr name="port" type="java.lang.Integer">13001</attr>
+    <request-listener class="co.id.bankdki.billerdkilinkrouter.iso.RequestListener" logger="Q2">
+        <property name="space"      value="tspace:defaultbiller-api-management"/>
+        <property name="queue"      value="mytxnqueuebiller-api-management"/>
+        <property name="isorequest" value="REQUESTBILLER-API-MANAGEMENT"/>
+        <property name="isosource"  value="ISOBILLER-API-MANAGEMENT"/>
+        <property name="logger"     value="Q2"/>
+        <property name="appname"    value="billerdkilink-router"/>
+        <property name="timeout"    value="30000"/>
+        <property name="port"       value="13001"/>
+    </request-listener>
+</server>

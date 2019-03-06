@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mux class="org.jpos.q2.iso.QMUX" logger="mitracom" name="biller-mitracom-pdam-channel_mux" realm="biller-mitracom-pdam-channel_mux">
+    <out>biller-mitracom-pdam-channel-in</out>
+    <in>biller-mitracom-pdam-channel-out</in>
+    <ready>biller-mitracom-pdam-channel.ready</ready>
+    <unhandled>biller-mitracom-pdam-channel-unhandled</unhandled>
+</mux>

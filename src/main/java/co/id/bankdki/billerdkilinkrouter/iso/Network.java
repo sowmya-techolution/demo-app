@@ -64,7 +64,7 @@ import org.jpos.core.Configurable;
              ISOMsg resp = qmux.request(m, 10000);
              Log.getLog("Q2","Q2").info("resp ====> "+ resp);
              if(resp != null){
-                 m.set(39,resp.getString(39));
+//                 m.set(39,resp.getString(39));
              }else {
                  m.set(39,"68");
              }

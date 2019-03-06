@@ -32,13 +32,9 @@ public class History {
     private String rekon;
 
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setId(Long id) { this.id = id; }
 
     public Date getDate() {
         return date;
@@ -52,16 +48,10 @@ public class History {
         return data;
     }
 
-    public void setData(String data) {
-        this.data = data;
-    }
+    public void setData(String data) { this.data = data; }
 
-    public String getRekon() {
-        return rekon;
-    }
+    public String getRekon() { return rekon; }
 
-    public void setRekon(String rekon) {
-        this.rekon = rekon;
-    }
+    public void setRekon(String rekon) { this.rekon = rekon; }
 
 }

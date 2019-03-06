@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-bpjstk-channel" realm="biller-bpjstk-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.100.111.153"/>
+    <property name="port" value="9702"/>
+
+    </channel>
+    <in>biller-bpjstk-channel-in</in>
+    <out>biller-bpjstk-channel-out</out>
+    <ready>biller-bpjstk-channel.ready</ready>
+    <unhandled>biller-bpjstk-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

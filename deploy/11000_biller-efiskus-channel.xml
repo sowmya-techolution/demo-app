@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-efiskus-channel" realm="biller-efiskus-channel">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
+
+    <property name="host" value="10.32.3.9"/>
+    <property name="port" value="11000"/>
+
+
+    </channel>
+    <in>biller-efiskus-channel-in</in>
+    <out>biller-efiskus-channel-out</out>
+    <ready>biller-efiskus-channel.ready</ready>
+    <unhandled>biller-efiskus-channel-unhandled</unhandled>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

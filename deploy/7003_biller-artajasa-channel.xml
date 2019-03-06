@@ -2,7 +2,7 @@
 <channel-adaptor class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2" name="biller-artajasa-channel" realm="biller-artajasa-channel">
     <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="co.id.bankdki.billerdkilinkrouter.iso.ISO87APackager">
 
-    <property name="host" value="10.100.111.152"/>
+    <property name="host" value="10.100.111.153"/>
     <property name="port" value="7003"/>
 
 

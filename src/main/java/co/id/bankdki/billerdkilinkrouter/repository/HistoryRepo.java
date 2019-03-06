@@ -1,4 +1,4 @@
-package co.id.bankdki.billerdkilinkrouter.iso.repository;
+package co.id.bankdki.billerdkilinkrouter.repository;
 
 import co.id.bankdki.billerdkilinkrouter.domain.History;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,7 +12,7 @@ import java.util.List;
  * Created by bankdki on 8/2/17.
  */
 @Repository
-public interface HistoryRepo extends JpaRepository<History, Long>{
+public interface HistoryRepo extends JpaRepository<History, Long> {
 
     @Transactional
     @Query(value = "select *\n" +

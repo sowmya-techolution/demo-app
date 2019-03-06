@@ -12,7 +12,6 @@ import org.jpos.space.SpaceFactory;
 import org.jpos.space.SpaceUtil;
 import org.jpos.transaction.Context;
 import org.jpos.transaction.TransactionParticipant;
-import org.jpos.util.Log;
 import org.jpos.util.NameRegistrar;
 
 import java.io.Serializable;
@@ -69,7 +68,7 @@ import java.text.DecimalFormatSymbols;
          df.setDecimalFormatSymbols(dfs);
 
          try {
-             Log.getLog(this.logger,this.logger).info(m.getValue());
+//             Log.getLog(this.logger,this.logger).info(m.getValue());
 
              ISOMsg b = new ISOMsg();
              b.setMTI("0200");
@@ -124,7 +123,7 @@ import java.text.DecimalFormatSymbols;
                  source.send(m);
              }
 
-             Log.getLog(this.logger,this.logger).info(m.getValue());
+//             Log.getLog(this.logger,this.logger).info(m.getValue());
          } catch (Exception e) {
              e.printStackTrace();
          }

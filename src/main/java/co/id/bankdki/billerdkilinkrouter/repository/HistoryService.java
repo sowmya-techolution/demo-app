@@ -1,4 +1,4 @@
-package co.id.bankdki.billerdkilinkrouter.iso.repository;
+package co.id.bankdki.billerdkilinkrouter.repository;
 
 import co.id.bankdki.billerdkilinkrouter.domain.History;
 import org.springframework.stereotype.Component;

@@ -15,7 +15,7 @@
 
   <log-listener class="org.jpos.util.DailyLogListener">
     <property name="window" value="86400" />
-    <property name="prefix" value="log/artajasa" />
+    <property name="prefix" value="log/artajasa/artajasa" />
     <property name="suffix" value=".log"/>
     <property name="date-format" value="-dd-MM-yyyy-HH"/>
     <property name="compression-format" value="gzip"/>

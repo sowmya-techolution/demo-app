@@ -2,6 +2,7 @@ package co.id.bankdki.billerdkilinkrouter.iso;
 
 import co.id.bankdki.billerdkilinkrouter.BillerdkilinkRouterApplication;
 import co.id.bankdki.billerdkilinkrouter.domain.History;
+import co.id.bankdki.billerdkilinkrouter.repository.HistoryService;
 import com.google.gson.Gson;
 import org.jpos.core.Configurable;
 import org.jpos.core.Configuration;
@@ -9,7 +10,7 @@ import org.jpos.core.ConfigurationException;
 import org.jpos.iso.ISOMsg;
 import org.jpos.transaction.Context;
 import org.jpos.transaction.TransactionParticipant;
-import org.jpos.util.Log;
+import org.jpos.util.NameRegistrar;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -54,6 +55,7 @@ import java.util.Map;
      @Override
      public void commit(long l, Serializable serializable) {
          ISOMsg m = (ISOMsg) ((Context) serializable).get(this.isorequest);
+         HistoryService historyService = (HistoryService) NameRegistrar.getIfExists("historyImpl");
          History dto = new History();
          Gson gson = new Gson();
          Map<String, Object> map = new HashMap<>();
@@ -62,11 +64,13 @@ import java.util.Map;
                  map.put(String.valueOf(i),m.getString(i));
              }
          }
+
          dto.setDate(new Date());
          dto.setData(gson.toJson(map));
          dto.setRekon(m.getString(60));
-         Log.getLog("Q2","Q2").info(gson.toJson(map));
-         Log.getLog("Q2","Q2").info(dto);
+//         Log.getLog("Q2","Q2").info(gson.toJson(map));
+//         Log.getLog("Q2","Q2").info(dto);
+         historyService.save(dto);
 
      }
 
