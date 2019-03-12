@@ -239,6 +239,10 @@
         <property name="0200381000100087"   value="Isolog TopUpOldJakCardInquiry Isolog"/>
         <property name="0200501000100087"   value="Isolog TopUpOldJakCardPayment Isolog"/>
 
+        <property name="0200381000100092"   value="Isolog MPNG2Inquiry Isolog"/>
+        <property name="0200501000100092"   value="Isolog MPNG2Payment Isolog"/>
+        <property name="0400501000100092"   value="Isolog MPNG2Reversal Isolog"/>
+        <property name="0200901000100092"   value="Isolog MPNG2ReInquiry Isolog"/>
 
         <property name="isorequest" value="REQUESTBILLER"/>
         <property name="isosource"  value="ISOBILLER"/>
@@ -735,6 +739,36 @@
             <property name="logger"         value="efiskus"/>
             <property name="timeout"        value="30000" />
             <property name="mux"            value="biller-efiskus-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="MPNG2Inquiry">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.mpng2.Inquiry" logger="mpn">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="mpn"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-mpn-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="MPNG2Payment">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.mpng2Payment" logger="mpn">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="mpn"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-mpn-channel_mux"/>
+        </participant>
+    </group>
+
+    <group name="MPNG2Reversal">
+        <participant class="co.id.bankdki.billerdkilinkrouter.iso.pajak.mpng2.Reversal" logger="mpn">
+            <property name="isorequest"     value="REQUESTBILLER"/>
+            <property name="isosource"      value="ISOBILLER"/>
+            <property name="logger"         value="mpn"/>
+            <property name="timeout"        value="30000" />
+            <property name="mux"            value="biller-mpn-channel_mux"/>
         </participant>
     </group>
 
