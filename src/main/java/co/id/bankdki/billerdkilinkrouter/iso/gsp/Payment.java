@@ -96,37 +96,24 @@ import java.text.DecimalFormatSymbols;
               b.set(106,m.getString(106));
               b.set(107,m.getString(107));
 
-
               QMUX qmux = (QMUX) NameRegistrar.get("mux." + this.mux);
               ISOMsg resp = qmux.request(b, this.timeout);
 
-
               if(resp != null){
-                  StringBuffer resp48 = new StringBuffer();
-                  switch (resp.getString(39)) {
-                    case "00":
-
-                    m.set(4,resp.getString(4));
-                    m.set(48, resp.getString(48));
-                    m.set(59,resp.getString(59));
-                    m.set(61,resp.getString(61));
-
-                break;
-
-            }
+                  m.set(4,resp.getString(4));
+                  m.set(48, resp.getString(48));
                   m.set(39,resp.getString(39));
-                  m.set(61,resp.getString(61));
-                  m.set(63,resp.getString(63));
-                  m.set(105,resp.getString(105));
-                  m.set(106,resp.getString(106));
-                  m.set(107,resp.getString(107));
-
               } else {
-
                   m.set(39,"68");
                   m.set(61,"Transaction TimeOut");
-
               }
+
+              m.set(59,resp.getString(59));
+              m.set(61,resp.getString(61));
+              m.set(63,resp.getString(63));
+              m.set(105,resp.getString(105));
+              m.set(106,resp.getString(106));
+              m.set(107,resp.getString(107));
 
               m.setResponseMTI();
               source.send(m);
