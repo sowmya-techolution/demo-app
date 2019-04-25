@@ -6,6 +6,7 @@ import org.jpos.core.Configuration;
 import org.jpos.core.ConfigurationException;
 import org.jpos.iso.ISOMsg;
 import org.jpos.iso.ISOSource;
+import org.jpos.iso.ISOUtil;
 import org.jpos.q2.iso.QMUX;
 import org.jpos.space.Space;
 import org.jpos.space.SpaceFactory;
@@ -124,7 +125,9 @@ import java.text.DecimalFormatSymbols;
               } else {
 
                   m.set(39,"68");
-                  m.set(61,"Transaction TimeOut");
+                  int padding1 = 0;
+                  padding1 = (32- "Transaction TimeOut".length())/2;
+                  m.set(61, ISOUtil.strpad(" ",padding1)+"Transaction TimeOut"+ISOUtil.strpad(" ",padding1));
 
               }
 
