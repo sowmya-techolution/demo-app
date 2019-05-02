@@ -1,6 +1,7 @@
 package co.id.bankdki.billerdkilinkrouter.iso.pajak.mpng2;
 
 import co.id.bankdki.billerdkilinkrouter.BillerdkilinkRouterApplication;
+import co.id.bankdki.billerdkilinkrouter.iso.ResCode;
 import org.jpos.core.Configurable;
 import org.jpos.core.Configuration;
 import org.jpos.core.ConfigurationException;
@@ -103,18 +104,22 @@ import java.text.DecimalFormatSymbols;
 
 
               if(resp != null){
-                  StringBuffer resp48 = new StringBuffer();
                   switch (resp.getString(39)) {
                     case "00":
+                        m.set(4,resp.getString(4));
+                        m.set(48, resp.getString(48));
+                        m.set(59,resp.getString(59));
+                        m.set(61,resp.getString(61));
+                        break;
 
-                    m.set(4,resp.getString(4));
-                    m.set(48, resp.getString(48));
-                    m.set(59,resp.getString(59));
-                    m.set(61,resp.getString(61));
+                    default:
+                        m.set(39,resp.getString(39));
+                        int padding1 = 0;
+                        padding1 = (32- ResCode.getRC(m.getString(39)).length())/2;
+                        m.set(61, ISOUtil.strpad(" ",padding1)+ResCode.getRC(m.getString(39))+ISOUtil.strpad(" ",padding1));
+                        break;
 
-                break;
-
-            }
+                  }
                   m.set(39,resp.getString(39));
                   m.set(61,resp.getString(61));
                   m.set(63,resp.getString(63));
@@ -128,7 +133,6 @@ import java.text.DecimalFormatSymbols;
                   int padding1 = 0;
                   padding1 = (32- "Transaction TimeOut".length())/2;
                   m.set(61, ISOUtil.strpad(" ",padding1)+"Transaction TimeOut"+ISOUtil.strpad(" ",padding1));
-
               }
 
               m.setResponseMTI();
