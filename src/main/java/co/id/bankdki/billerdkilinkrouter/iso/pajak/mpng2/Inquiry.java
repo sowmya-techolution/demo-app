@@ -110,6 +110,8 @@ import java.text.DecimalFormatSymbols;
                  m.set(39,resp.getString(39));
                  m.set(61,resp.getString(61));
                  m.set(63,resp.getString(63));
+                 m.set(105,resp.getString(105));
+                 m.set(106,resp.getString(106));
 
                  m.setResponseMTI();
                  source.send(m);
