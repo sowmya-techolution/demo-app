@@ -4,7 +4,7 @@
 		<modelVersion>4.0.0</modelVersion>
 		<groupId>co.id.bankdki</groupId>
 		<artifactId>billerdkilink-router</artifactId>
-		<version>0.0.3-DEVELOPMENT</version>
+		<version>0.0.4-DEVELOPMENT</version>
 		<packaging>jar</packaging>
 
 		<name>billerdkilink-router</name>

@@ -106,6 +106,8 @@ import java.text.DecimalFormatSymbols;
                      m.set(59,resp.getString(59));
                      m.set(61,resp.getString(61));
                      m.set(63,resp.getString(63));
+                     m.set(105,resp.getString(105));
+                     m.set(106,resp.getString(106));
                  }
                  m.set(39,resp.getString(39));
                  m.set(61,resp.getString(61));
