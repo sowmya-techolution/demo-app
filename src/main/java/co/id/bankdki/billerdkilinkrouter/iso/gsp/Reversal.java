@@ -107,8 +107,11 @@ import java.io.Serializable;
 
              } else {
                  m.set(39,"68");
-                 m.set(61,"Transaction TimeOut");
-
+                 if (resp.hasField(61)) {
+                     m.set(61,resp.getString(61));
+                 }else{
+                     m.set(61,"Transaction TimeOut");
+                 }
              }
              m.setResponseMTI();
              source.send(m);
