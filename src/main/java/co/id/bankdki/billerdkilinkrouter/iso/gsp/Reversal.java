@@ -1,6 +1,7 @@
 package co.id.bankdki.billerdkilinkrouter.iso.gsp;
 
 import co.id.bankdki.billerdkilinkrouter.BillerdkilinkRouterApplication;
+import co.id.bankdki.billerdkilinkrouter.iso.ResCode;
 import org.jpos.core.Configurable;
 import org.jpos.core.Configuration;
 import org.jpos.core.ConfigurationException;
@@ -90,28 +91,31 @@ import java.io.Serializable;
              f.set(107,m.getString(107));
 
              QMUX qmux = (QMUX) NameRegistrar.get("mux." + this.mux);
-             ISOMsg resp = qmux.request(f, 10000);
+             ISOMsg resp = qmux.request(f, this.timeout);
 
              if(resp != null){
                  switch (resp.getString(39)) {
-                 case "00":
-                 m.set(59,resp.getString(59));
-                 m.set(61,resp.getString(61));
+                     case "00":
+                         m.set(39, resp.getString(39));
+                         m.set(59, resp.getString(59));
+                         m.set(61, resp.getString(61));
+                         break;
 
-                 break;
+                     default:
+                         m.set(39, resp.getString(39));
+                         m.set(59, resp.getString(59));
 
+                         Log.getLog("Q2","Q2").info(resp.getString(61));
+                         if (resp.hasField(61)) {
+                             m.set(61, resp.getString(61));
+                         } else {
+                             m.set(61, ResCode.getRC(resp.getString(39)));
+                         }
+                         break;
                  }
-                 m.set(39,resp.getString(39));
-                 m.set(59,resp.getString(59));
-                 m.set(61,resp.getString(61));
-
              } else {
                  m.set(39,"68");
-                 if (resp.hasField(61)) {
-                     m.set(61,resp.getString(61));
-                 }else{
-                     m.set(61,"Transaction TimeOut");
-                 }
+                 m.set(61,"Transaction TimeOut");
              }
              m.setResponseMTI();
              source.send(m);
