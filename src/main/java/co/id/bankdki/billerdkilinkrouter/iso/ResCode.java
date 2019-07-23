@@ -57,6 +57,7 @@ public class ResCode {
         map.put("93", "Transaction Already Reversed");
         map.put("96", "System Malfunction");
         map.put("97", "Bukan Peserta KJP");
+        map.put("99", "Failed");
         map.put(""  , "Please Update EDC System");
         map.put("F1", "Unregistered Issuer");
         map.put("F2", "List Issuer Bank Empty");
