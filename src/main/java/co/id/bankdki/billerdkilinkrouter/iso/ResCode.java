@@ -23,6 +23,7 @@ public class ResCode {
         map.put("20", "Invalid Response");
         map.put("25", "Unable to locate record on file.");
         map.put("26", "Melebihi limit trx");
+        map.put("27", "Tagihan sudah dibayar CA lain");
         map.put("30", "Format Error");
         map.put("31", "Bank Not Supported");
         map.put("33", "Expired Card");
