@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="billinggenerator-channel_mux" realm="billinggenerator-channel_mux">
-    <out>billinggenerator-channel-in</out>
-    <in>billinggenerator-channel-out</in>
-    <ready>billinggenerator-channel.ready</ready>
-    <unhandled>billinggenerator-channel-unhandled</unhandled>
-</mux>

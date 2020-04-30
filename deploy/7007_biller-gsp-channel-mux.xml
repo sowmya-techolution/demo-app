@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="gsp" name="biller-gsp-channel_mux" realm="biller-gsp-channel_mux">
-    <out>biller-gsp-channel-in</out>
-    <in>biller-gsp-channel-out</in>
-    <ready>biller-gsp-channel.ready</ready>
-    <unhandled>biller-gsp-channel-unhandled</unhandled>
-</mux>

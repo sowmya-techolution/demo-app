@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-artajasa-channel_mux" realm="biller-artajasa-channel_mux">
-    <out>biller-artajasa-channel-in</out>
-    <in>biller-artajasa-channel-out</in>
-    <ready>biller-artajasa-channel.ready</ready>
-    <unhandled>biller-artajasa-channel-unhandled</unhandled>
-</mux>

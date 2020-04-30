@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-pbb-channel_mux" realm="biller-pbb-channel_mux">
-    <out>biller-pbb-channel-in</out>
-    <in>biller-pbb-channel-out</in>
-    <ready>biller-pbb-channel.ready</ready>
-    <unhandled>biller-pbb-channel-unhandled</unhandled>
-</mux>

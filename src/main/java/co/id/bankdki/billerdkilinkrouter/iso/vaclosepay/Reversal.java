@@ -90,14 +90,13 @@ import java.io.Serializable;
              f.set(107,m.getString(107));
 
              QMUX qmux = (QMUX) NameRegistrar.get("mux." + this.mux);
-             ISOMsg resp = qmux.request(f, 10000);
+             ISOMsg resp = qmux.request(f, this.timeout);
 
              if(resp != null){
                  switch (resp.getString(39)) {
                  case "00":
                  m.set(59,resp.getString(59));
                  m.set(61,resp.getString(61));
-
                  break;
 
                  }

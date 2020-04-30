@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-pkbesamsat-channel_mux" realm="biller-pkbesamsat-channel_mux">
-    <out>biller-pkbesamsat-channel-in</out>
-    <in>biller-pkbesamsat-channel-out</in>
-    <ready>biller-pkbesamsat-channel.ready</ready>
-    <unhandled>biller-pkbesamsat-channel-unhandled</unhandled>
-</mux>

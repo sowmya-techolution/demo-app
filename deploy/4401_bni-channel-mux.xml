@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="bni-channel_mux" realm="bni-channel_mux">
-    <out>bni-channel-in</out>
-    <in>bni-channel-out</in>
-    <ready>bni-channel.ready bni-channel-1.ready</ready>
-    <unhandled>bni-channel-unhandled</unhandled>
-</mux>

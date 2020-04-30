@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="biller-efiskus-channel_mux" realm="biller-efiskus-channel_mux">
-    <out>biller-efiskus-channel-in</out>
-    <in>biller-efiskus-channel-out</in>
-    <ready>biller-efiskus-channel.ready</ready>
-    <unhandled>biller-efiskus-channel-unhandled</unhandled>
-</mux>
